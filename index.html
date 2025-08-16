@@ -10,46 +10,83 @@
 <link rel="icon" href="https://i.imgur.com/JrjM1jf.png" type="image/png">
 
 <style>
-/* Global */
+/* Global Styles */
 * {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Raleway', sans-serif; background:#000; color:#fff; line-height:1.6;}
+body {font-family:'Raleway', sans-serif; background:#000; color:#fff; line-height:1.6; text-align:center;}
+a {text-decoration:none;}
 
-/* Header */
-header {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    background:#000;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+/* Header Title */
+header {padding:60px 20px;}
+header h1 {font-size:4rem; font-family:'Courier New', monospace; margin-bottom:20px;}
 
-.logo-title {display:flex; align-items:center;}
-.logo-title img {width:50px; height:50px; border-radius:10px; margin-right:15px;}
-.logo-title h2 {font-size:1.8rem; display:flex; align-items:center; margin:0;}
-
-/* Navigation buttons */
-nav button {
-    margin-left:12px; padding:12px 22px; border:none; border-radius:25px;
-    cursor:pointer; background:#111; color:#fff; font-weight:bold; font-size:16px; transition:0.3s;
-}
-nav button:hover {background:#333; transform:scale(1.05);}
-
-/* Sections */
-section {padding:100px 20px; text-align:center; position:relative;}
-h1 {font-size:3rem; margin-bottom:25px; color:#fff;}
-h2 {font-size:2.2rem; margin-bottom:20px; color:#fff;}
-p {max-width:800px; margin:0 auto 30px; color:#ddd; font-size:1.1rem; line-height:1.5;}
+/* Description Text */
+header p {font-size:1.2rem; max-width:700px; margin:0 auto 40px; color:#ddd;}
 
 /* Buttons */
-.section-button {
-    padding:14px 30px; font-size:16px; background:#1a73e8; color:#fff;
-    border:none; border-radius:30px; cursor:pointer; transition:0.3s;
-    text-decoration:none; display:inline-block; margin-top:20px;
+.button {
+    display:inline-block;
+    padding:15px 35px;
+    margin:12px;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+    cursor:pointer;
 }
-.section-button:hover {background:#155ab6; transform:scale(1.05);}
+.black-button {
+    background:#111;
+    color:#fff;
+}
+.black-button:hover {background:#333; transform:scale(1.05);}
+.donate-button {
+    background:#1a73e8;
+    color:#fff;
+}
+.donate-button:hover {background:#155ab6; transform:scale(1.05);}
 
 /* Footer */
-footer {text-align:center; padding:30px; background:
+footer {
+    margin-top:80px;
+    padding:30px 0;
+    color:#aaa;
+    text-align:center;
+}
+
+/* Favicon Corner Image */
+.corner-icon {
+    position:fixed;
+    top:20px;
+    left:20px;
+    width:50px;
+    height:50px;
+    border-radius:10px;
+    z-index:1000;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Corner Icon -->
+<img src="https://i.imgur.com/JrjM1jf.png" alt="Icon" class="corner-icon">
+
+<header>
+    <h1>Solution</h1>
+    <p>
+        Offre un moyen simple et éfficace d'améliorer et de concevoir un ordinateur puissant 
+        a l'aide de connaissances et d'outils sous forme de site web.
+    </p>
+
+    <!-- Buttons -->
+    <a href="https://pcpartpicker.com" class="button black-button">PC Part Picker</a>
+    <a href="https://pc-builds.com" class="button black-button">PC-Builds</a>
+    <a href="https://www.paypal.com/donate?business=zxer_officiel@outlook.fr&currency_code=EUR" class="button donate-button">Faire un don</a>
+</header>
+
+<!-- Footer -->
+<footer>
+    2025 SolutionsTechnologie - Tous droits réservés
+</footer>
+
+</body>
+</html>
