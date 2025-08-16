@@ -12,11 +12,11 @@
 <style>
 /* Global Styles */
 * {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Raleway', sans-serif; background:#000; color:#fff; line-height:1.6; text-align:center;}
+body {font-family:'Raleway', sans-serif; background:#000; color:#fff; line-height:1.6; text-align:center; display:flex; flex-direction:column; min-height:100vh;}
 a {text-decoration:none;}
 
 /* Header Title */
-header {padding:60px 20px;}
+header {padding:80px 20px;}
 header h1 {font-size:4rem; font-family:'Courier New', monospace; margin-bottom:20px;}
 
 /* Description Text */
@@ -46,13 +46,14 @@ header p {font-size:1.2rem; max-width:700px; margin:0 auto 40px; color:#ddd;}
 
 /* Footer */
 footer {
-    margin-top:80px;
+    margin-top:40px;
     padding:30px 0;
     color:#aaa;
     text-align:center;
+    margin-top:auto;
 }
 
-/* Favicon Corner Image */
+/* Corner Icon */
 .corner-icon {
     position:fixed;
     top:20px;
@@ -61,6 +62,16 @@ footer {
     height:50px;
     border-radius:10px;
     z-index:1000;
+}
+
+/* Form Styles */
+form {margin-top:40px;}
+form input[type="number"] {
+    padding:10px 15px;
+    border-radius:25px;
+    border:none;
+    width:120px;
+    margin-right:10px;
 }
 </style>
 </head>
@@ -80,16 +91,17 @@ footer {
     <!-- Buttons -->
     <a href="https://pcpartpicker.com" class="button black-button">PC Part Picker</a>
     <a href="https://pc-builds.com" class="button black-button">PC-Builds</a>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="zxer_officiel@outlook.fr">
-    <input type="hidden" name="item_name" value="Donation">
-    <input type="hidden" name="currency_code" value="CAD">
-    <input type="number" name="amount" placeholder="Montant en CAD" style="padding:10px 15px; border-radius:25px; border:none; width:120px; margin-right:10px;" required>
-    <input type="submit" value="Faire un don" class="button donate-button">
-    </form>
-
 </header>
+
+<!-- Donate Form just above footer -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_xclick">
+  <input type="hidden" name="business" value="zxer_officiel@outlook.fr">
+  <input type="hidden" name="item_name" value="Donation">
+  <input type="hidden" name="currency_code" value="CAD">
+  <input type="number" name="amount" placeholder="Montant en CAD" required>
+  <input type="submit" value="Faire un don" class="button donate-button">
+</form>
 
 <!-- Footer -->
 <footer>
@@ -98,4 +110,3 @@ footer {
 
 </body>
 </html>
-
