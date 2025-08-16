@@ -46,11 +46,9 @@ header p {font-size:1.2rem; max-width:700px; margin:0 auto 40px; color:#ddd;}
 
 /* Footer */
 footer {
-    margin-top:40px;
     padding:30px 0;
     color:#aaa;
     text-align:center;
-    margin-top:auto;
 }
 
 /* Corner Icon */
@@ -64,9 +62,11 @@ footer {
     z-index:1000;
 }
 
-/* Form Styles */
-form {margin-top:40px;}
-form input[type="number"] {
+/* Form Styles above footer */
+.footer-donate {
+    margin-bottom:20px;
+}
+.footer-donate input[type="number"] {
     padding:10px 15px;
     border-radius:25px;
     border:none;
@@ -93,20 +93,21 @@ form input[type="number"] {
     <a href="https://pc-builds.com" class="button black-button">PC-Builds</a>
 </header>
 
-<!-- Donate Form just above footer -->
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-  <input type="hidden" name="cmd" value="_xclick">
-  <input type="hidden" name="business" value="zxer_officiel@outlook.fr">
-  <input type="hidden" name="item_name" value="Donation">
-  <input type="hidden" name="currency_code" value="CAD">
-  <input type="number" name="amount" placeholder="Montant en CAD" required>
-  <input type="submit" value="Faire un don" class="button donate-button">
-</form>
+<!-- Footer Section with Donate Form -->
+<div style="margin-top:auto; padding-bottom:40px;">
+    <form class="footer-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="zxer_officiel@outlook.fr">
+      <input type="hidden" name="item_name" value="Donation">
+      <input type="hidden" name="currency_code" value="CAD">
+      <input type="number" name="amount" placeholder="Montant en CAD" required>
+      <input type="submit" value="Faire un don" class="button donate-button">
+    </form>
 
-<!-- Footer -->
-<footer>
-    2025 SolutionsTechnologie - Tous droits réservés
-</footer>
+    <footer>
+        2025 SolutionsTechnologie - Tous droits réservés
+    </footer>
+</div>
 
 </body>
 </html>
