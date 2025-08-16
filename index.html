@@ -26,7 +26,7 @@ header p {font-size:1.2rem; max-width:700px; margin:0 auto 40px; color:#ddd;}
 .button {
     display:inline-block;
     padding:15px 35px;
-    margin:12px;
+    margin:12px 0;
     border-radius:30px;
     font-size:16px;
     font-weight:bold;
@@ -62,7 +62,7 @@ footer {
     z-index:1000;
 }
 
-/* Form Styles above footer */
+/* Footer Donate Form */
 .footer-donate {
     margin-bottom:20px;
 }
@@ -72,6 +72,14 @@ footer {
     border:none;
     width:120px;
     margin-right:10px;
+}
+
+/* Center Buttons Container */
+.buttons-container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-top:30px;
 }
 </style>
 </head>
@@ -88,9 +96,11 @@ footer {
         a l'aide de connaissances et d'outils sous forme de site web.
     </p>
 
-    <!-- Buttons -->
-    <a href="https://pcpartpicker.com" class="button black-button">PC Part Picker</a>
-    <a href="https://pc-builds.com" class="button black-button">PC-Builds</a>
+    <!-- Centered Buttons -->
+    <div class="buttons-container">
+        <a href="https://pcpartpicker.com" class="button black-button">PC Part Picker</a>
+        <a href="https://pc-builds.com" class="button black-button">PC-Builds</a>
+    </div>
 </header>
 
 <!-- Footer Section with Donate Form -->
