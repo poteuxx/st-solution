@@ -10,76 +10,119 @@
 <link rel="icon" href="https://i.imgur.com/JrjM1jf.png" type="image/png">
 
 <style>
-/* Global Styles */
+/* RESET */
 * {margin:0; padding:0; box-sizing:border-box;}
-body {font-family:'Raleway', sans-serif; background:#000; color:#fff; line-height:1.6; text-align:center; display:flex; flex-direction:column; min-height:100vh;}
+body {font-family:'Raleway', sans-serif; background:#0b0c0f; color:#fff; line-height:1.6; display:flex; flex-direction:column; min-height:100vh; text-align:center;}
 a {text-decoration:none;}
 
-/* Header Title */
-header {padding:80px 20px;}
-header h1 {font-size:4rem; font-family:'Courier New', monospace; margin-bottom:20px;}
+/* HEADER */
+header {
+  padding:100px 20px 40px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+}
+header h1 {
+  font-size:3rem;
+  font-weight:700;
+  background: linear-gradient(90deg, #60a5fa, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header p {
+  font-size:1.1rem;
+  max-width:720px;
+  color:#e5e7eb;
+}
 
-/* Description Text */
-header p {font-size:1.2rem; max-width:700px; margin:0 auto 40px; color:#ddd;}
+/* BUTTONS */
+.buttons-container {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  gap:16px;
+  justify-content:center;
+  margin-top:20px;
+}
 
-/* Buttons */
 .button {
-    display:inline-block;
-    padding:15px 35px;
-    margin:12px 0;
-    border-radius:30px;
-    font-size:16px;
-    font-weight:bold;
-    transition:0.3s;
-    cursor:pointer;
+  padding:12px 30px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  transition: all 0.3s ease;
+  cursor:pointer;
+  color:#fff;
 }
+
 .black-button {
-    background:#111;
-    color:#fff;
+  background:#111;
+  border:2px solid #333;
 }
-.black-button:hover {background:#333; transform:scale(1.05);}
+
+.black-button:hover {
+  background:#222;
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:0 6px 18px rgba(37, 99, 235,0.5);
+}
+
 .donate-button {
-    background:#1a73e8;
-    color:#fff;
-}
-.donate-button:hover {background:#155ab6; transform:scale(1.05);}
-
-/* Footer */
-footer {
-    padding:30px 0;
-    color:#aaa;
-    text-align:center;
+  background:#2563eb;
+  border:none;
 }
 
-/* Corner Icon */
+.donate-button:hover {
+  background:#1e40af;
+  transform:translateY(-2px) scale(1.05);
+  box-shadow:0 6px 18px rgba(37, 99, 235,0.5);
+}
+
+/* CORNER ICON */
 .corner-icon {
-    position:fixed;
-    top:20px;
-    left:20px;
-    width:50px;
-    height:50px;
-    border-radius:10px;
-    z-index:1000;
+  position:fixed;
+  top:20px;
+  left:20px;
+  width:50px;
+  height:50px;
+  border-radius:12px;
+  z-index:1000;
+  box-shadow:0 2px 8px rgba(0,0,0,0.4);
 }
 
-/* Footer Donate Form */
+/* FOOTER */
+footer {
+  margin-top:auto;
+  padding:30px 0;
+  color:#9ca3af;
+  text-align:center;
+  font-size:12px;
+}
+
+/* DONATE FORM */
 .footer-donate {
-    margin-bottom:20px;
+  margin-bottom:20px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
 }
 .footer-donate input[type="number"] {
-    padding:10px 15px;
-    border-radius:25px;
-    border:none;
-    width:120px;
-    margin-right:10px;
+  padding:12px 18px;
+  border-radius:25px;
+  border:none;
+  width:140px;
+  font-size:14px;
 }
 
-/* Center Buttons Container */
-.buttons-container {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-top:30px;
+/* RESPONSIVE */
+@media(max-width:600px){
+  header h1 {font-size:2.2rem;}
+  header p {font-size:1rem;}
+  .button {padding:10px 22px; font-size:13px;}
+  .footer-donate input[type="number"]{width:120px;}
+  .buttons-container{flex-direction:column;}
 }
 </style>
 </head>
@@ -92,19 +135,18 @@ footer {
 <header>
     <h1>Solution</h1>
     <p>
-        Offre un moyen simple et éfficace d'améliorer et de concevoir un ordinateur puissant 
-        a l'aide de connaissances et d'outils sous forme de site web.
+        Améliorez et concevez un ordinateur puissant grâce à des outils fiables et des guides simples, disponibles directement depuis votre navigateur.
     </p>
 
-    <!-- Centered Buttons -->
+    <!-- Buttons -->
     <div class="buttons-container">
         <a href="https://pcpartpicker.com" class="button black-button">PC Part Picker</a>
         <a href="https://pc-builds.com" class="button black-button">PC-Builds</a>
     </div>
 </header>
 
-<!-- Footer Section with Donate Form -->
-<div style="margin-top:auto; padding-bottom:40px;">
+<!-- Footer + Donate -->
+<div style="padding-bottom:40px;">
     <form class="footer-donate" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="zxer_officiel@outlook.fr">
@@ -115,7 +157,7 @@ footer {
     </form>
 
     <footer>
-        2025 SolutionsTechnologie - Tous droits réservés
+        © 2026 SolutionsTechnologie - Tous droits réservés
     </footer>
 </div>
 
